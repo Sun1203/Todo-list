@@ -1,0 +1,84 @@
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700&display=swap');
+
+
+* {margin: 0;padding: 0;box-sizing: border-box;font-size: inherit;font-weight: normal;
+list-style: none;
+text-decoration: none;
+}
+
+a {
+    color: black;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color:  #FDF9FA;
+    overflow-x: hidden;
+}
+
+.btns {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    display: flex;
+    font-size: 20px;
+    gap: 30px;
+}
+
+.button {
+  background-color: #02B0A2;
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px 16px;
+}
+
+
+.button:hover {
+    color: #02B0A2;
+    background-color: #fff;
+    box-shadow: rgba(0,0,0,0.11) 0px 1px 4px 0px;
+    cursor: pointer;
+}
+
+/* hr {
+    border: 1px solid black;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+} */
+
+
+
+/* -------------------------------------------- wrapper ---------------------------------------------- */
+
+.wrapper {
+    height: 100vh;
+    /*This part is important for centering*/
+    display: grid;
+    place-items: center;
+  }
+  
+  .typing-demo {
+    width: 22ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 3em;
+    font-weight: 900;
+    color: #020202;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }

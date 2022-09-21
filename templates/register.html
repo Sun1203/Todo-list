@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!--    <meta property="og:title" content="스위터 - 세상을 달달하게"/>-->
 
     <!-- Webpage Title -->
     <title>Sign up | ToDoList</title>
@@ -9,10 +10,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="stylesheet" href="../static/css/register.css">
     <!-- Bulma CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">-->
     <!-- Font Awesome CSS -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!--    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
 
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -123,17 +125,18 @@
 <body>
 <section class="section">
     <div class="container">
-        <div class="box" style="max-width: 480px;margin:auto">
+        <div class="box">
+              <p class="frm_txt"> Get started in 1 minutes!</p>
             <article class="media">
                 <div class="media-content">
                     <div class="content">
                         <div class="field has-addons">
-                            <div class="control has-icons-left" style="width:100%">
+                            <div class="control has-icons-left">
                                 <input id="input-username" class="input" type="text" placeholder="아이디">
                                 <span class="icon is-small is-left"><i class="fa fa-user"></i></span>
                             </div>
                             <div id="btn-check-dup" class="control">
-                                <button class="button is-sparta" onclick="check_dup()">중복확인</button>
+                                <button class="button is-sparta" id="db_chk_btn" onclick="check_dup()">중복확인</button>
                             </div>
 
                         </div>
@@ -161,14 +164,14 @@
 
                                 </div>
                             </div>
-                            <nav class="level is-mobile">
+                            <div class="level is-mobile" id="btns">
                                 <button class="level-item button is-sparta" onclick="sign_up()">
                                     회원가입
                                 </button>
-                                <button class="level-item button is-sparta is-outlined" onclick="window.location.href='/'">
+                                <button class="level-item button is-sparta is-outlined" id="btn_cxl" onclick="window.location.href='/'">
                                     취소
                                 </button>
-                            </nav>
+                            </div>
                         </div>
 
                     </div>

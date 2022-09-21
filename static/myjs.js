@@ -15,6 +15,32 @@ function post() {
     })
 }
 
+function done_bucket(_id) {
+            $.ajax({
+                type: "POST",
+                url: "/bucket/done",
+                data: {num_give: num},
+                success: function (response) {
+                    alert(response["msg"])
+                    window.location.reload()
+                }
+            });
+        }
+function toggle_2(post_id){
+     $.ajax({
+                type: "POST",
+                url: "/doneCheck",
+                data: {post_id_give_2: post_id},
+                success: function (response) {
+                    alert(response["msg"])
+                    window.location.reload()
+                }
+            });
+
+}
+function toggle_3(){
+
+}
 function get_posts(username) {
     if (username == undefined) {
         username = ""
@@ -27,8 +53,10 @@ function get_posts(username) {
         success: function (response) {
             if (response["result"] == "success") {
                 let posts = response["posts"]
+                //let post_num = response["post_num"]
                 for (let i = 0; i < posts.length; i++) {
                     let post = posts[i]
+                    //let post_num_2 = post_num[i]
                     let time_post = new Date(post["date"])
                     let time_before = time2str(time_post)
 
@@ -36,35 +64,45 @@ function get_posts(username) {
                     let class_star = post['star_by_me'] ? "fa-star" : "fa-star-o"
                     let class_like = post['like_by_me'] ? "fa-thumbs-up" : "fa-thumbs-o-up"
 
-                    let html_temp = `<div class="box" id="${post["_id"]}">
+
+                //  if (post_num_2 == 0) {
+                        let html_temp = `<div class="box" id="${post["_id"]}">
                                         <article class="media">
                                             <div class="media-content">
                                                 <div class="content">
                                                     <p>
                                                         <small>${time_before}</small>
                                                         <br>
-                                                       <a>✅</a>${post['comment']}
+                                                       <a>✅</a>${post['comment']}<button onclick="#">완료</button><button onclick="toggle_3()">삭제</button>
+                                                        
                                                     </p>
                                                 </div>
-                                                <nav class="level is-mobile">
-                                                    <a onclick="">⭕</a>
-                                                    <a onclick="">❎</a>
                                                 
-                                                        <a class="level-item is-sparta" aria-label="star" onclick="toggle_like('${post['_id']}', 'star')">
-                                                            <span class="icon is-small"><i class="fa ${class_star}"
-                                                                                           aria-hidden="true"></i></span>&nbsp;<span class="like-num">${num2str(post["count_star"])}</span>
-                                                        </a>
-                                                        <a class="level-item is-sparta" aria-label="like" onclick="toggle_like('${post['_id']}', 'like')">
-                                                            <span class="icon is-small"><i class="fa ${class_like}"
-                                                                                           aria-hidden="true"></i></span>&nbsp;<span class="like-num">${num2str(post["count_like"])}</span>
-                                                        </a>
-                                                    </div>
-
-                                                </nav>
                                             </div>
                                         </article>
                                     </div>`
-                    $("#post-box").append(html_temp)
+                        $("#post-box").append(html_temp)
+                       // console.log('post_num_2')
+                 //  }
+                    // else if(post_num == 1)
+                    // {
+                    //     let html_temp = `<div class="box" id="${post["_id"]}">
+                    //                     <article class="media">
+                    //                         <div class="media-content">
+                    //                             <div class="content">
+                    //                                 <p>
+                    //                                     <small>${time_before}</small>
+                    //                                     <br>
+                    //                                    <a class="done">✅</a>${post['comment']}<button onclick="#">완료</button><button onclick="toggle_3()">삭제</button>
+                    //
+                    //                                 </p>
+                    //                             </div>
+                    //
+                    //                         </div>
+                    //                     </article>
+                    //                 </div>`
+                    //     $("#post-box").append(html_temp)
+                    // }
                 }
             }
         }

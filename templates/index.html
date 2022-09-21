@@ -11,7 +11,7 @@
     <!-- Bulma CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <!-- Font Awesome CSS -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!--    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
 
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -77,20 +77,21 @@
         Plan your Everyday.
     </div>
 </div>
-<div class="btns">
-    <div class="button" onclick="window.location.href='/sign'">Sign Up</div>
-    <div class="button" onclick="hidden_show()">Login</div>
+<div class="btns" id="btns">
+    <div class="button" id="join" onclick="window.location.href='/sign'">Sign Up</div>
+    <div class="button" id="login" onclick="hidden_show()">Login</div>
 </div>
 
 
 <section class="section">
     <div class="container" id="signin-box">
-        <div class="box" style="max-width: 480px;margin:auto">
+        <div class="box">
+             <p class="frm_txt"> Login </p>
             <article class="media">
                 <div class="media-content">
                     <div class="content">
                         <div class="field has-addons">
-                            <div class="control has-icons-left" style="width:100%">
+                            <div class="control has-icons-left">
                                 <input id="input-username" class="input" type="text" placeholder="아이디">
                                 <span class="icon is-small is-left"><i class="fa fa-user"></i></span>
                             </div>
@@ -101,30 +102,62 @@
                                 <span class="icon is-small is-left"><i class="fa fa-lock"></i></span>
                             </div>
                         </div>
-                    </div>
+
                     <div id="div-sign-in-or-up" class="has-text-centered">
                         <nav class="level is-mobile">
-                            <button class="level-item button is-sparta" onclick="show_hidden()">
+                            <button class="level-item button btn1 is-sparta" onclick="show_hidden()">
                                 취소
                             </button>
-                            <button class="level-item button is-sparta" onclick="sign_in()">
+                            <button class="level-item button is-sparta btn2" onclick="sign_in()">
                                 로그인
                             </button>
                         </nav>
                         <hr>
-                        <h4 class="mb-3">아직 회원이 아니라면</h4>
+                        <h6 class="mb-3 ">아직 회원이 아니라면</h6>
                         <nav class="level is-mobile">
-                            <button class="level-item button is-sparta is-outlined"
+                            <button class="level-item button is-sparta is-outlined btn3"
                                     onclick="window.location.href='/sign'">
                                 회원가입하기
                             </button>
                         </nav>
                     </div>
                 </div>
+                </div>
             </article>
         </div>
     </div>
 </section>
-
 </body>
+<script>
+$(function(){
+	$('.input').css('backgroundColor', '#F1F4F7')
+     .css("color","grey")
+     .css("width",500)
+     .css("height",52)
+     .css("borderRadius","10px")
+     .css("border","none")
+     .css("margin","10px 0")
+     .css("padding","solid 3px red")
+     .css("border","0 0 0 10px")
+     .css("outLine","none");
+
+    $('.btn1, .btn2, .btn3').css('backgroundColor','#02B0A2')
+        .css('borderRadius','10px')
+        .css('color','#fff')
+        .css('padding',' 20px')
+        .css('margin','10px')
+        .css("border","none")
+        .css("fontSize","16px")
+        .css("width","96px")
+        .css("height","45px");
+
+     $('.btn3').css('margin','10px 120px')
+
+
+      $('.box').css('padding','60px 20px')
+        .css('borderRadius','10px');
+      $(h6).css('fontSize','16px');
+});
+
+</script>
 </html>

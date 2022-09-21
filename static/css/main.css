@@ -3,9 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700&display=swap');
 
 
-* {margin: 0;padding: 0;box-sizing: border-box;font-size: inherit;font-weight: normal;
-list-style: none;
-text-decoration: none;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: inherit;
+    font-weight: normal;
+    list-style: none;
+    text-decoration: none;
 }
 
 a {
@@ -14,7 +19,7 @@ a {
 
 body {
     font-family: 'Noto Sans KR', sans-serif;
-    background-color:  #FDF9FA;
+    /*background-color: #FDF9FA;*/
     overflow-x: hidden;
 }
 
@@ -28,17 +33,17 @@ body {
 }
 
 .button {
-  background-color: #02B0A2;
-  border-radius: 10px;
-  color: #fff;
-  padding: 10px 16px;
+    background-color: #02B0A2;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px 16px;
 }
 
 
 .button:hover {
     color: #02B0A2;
     background-color: #fff;
-    box-shadow: rgba(0,0,0,0.11) 0px 1px 4px 0px;
+    box-shadow: rgba(0, 0, 0, 0.11) 0px 1px 4px 0px;
     cursor: pointer;
 }
 
@@ -49,17 +54,16 @@ body {
 } */
 
 
-
-/* -------------------------------------------- wrapper ---------------------------------------------- */
+/* ------------------------------------------ wrapper -------------------------------------------- */
 
 .wrapper {
     height: 100vh;
     /*This part is important for centering*/
     display: grid;
     place-items: center;
-  }
-  
-  .typing-demo {
+}
+
+.typing-demo {
     width: 22ch;
     animation: typing 2s steps(22), blink .5s step-end infinite alternate;
     white-space: nowrap;
@@ -69,16 +73,78 @@ body {
     font-size: 3em;
     font-weight: 900;
     color: #020202;
-  }
-  
-  @keyframes typing {
+}
+
+@keyframes typing {
     from {
-      width: 0
+        width: 0
     }
-  }
-      
-  @keyframes blink {
+}
+
+@keyframes blink {
     50% {
-      border-color: transparent
+        border-color: transparent
     }
-  }
+}
+
+#join, #login {
+    background-color: #02B0A2;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px 16px;
+}
+
+#join:hover {
+    color: #02B0A2;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.11) 0px 1px 4px 0px;
+}
+
+#login:hover {
+    color: #02B0A2;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.11) 0px 1px 4px 0px;
+}
+
+/* ----------------------------------------- box ------------------------------------------- */
+
+.box {
+    width: 727px;
+    height: auto;
+    margin: 150px auto 0 auto;
+    padding: 60px 20px;
+    border:1px solid #ECECEC ;
+    border-radius: 6px;
+    box-shadow: rgba(196,196,196,0.36) 0px 7px 10px 0px;
+}
+
+.frm_txt {
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+    color: #020202;
+    margin-bottom: 50px;
+}
+
+.content {
+    margin: 0 auto;
+    width: 500px;
+    height: auto;
+    position: relative;
+}
+
+.input {
+    background-color: #F1F4F7;
+    color: grey;
+    width: 500px;
+    height: 52px;
+    border-radius:10px ;
+    border: none;
+    margin: 10px 0;
+    padding: 0 0 0 10px;
+    outline: none;
+}
+
+.btn2 {
+    width: 96px;!important;
+}

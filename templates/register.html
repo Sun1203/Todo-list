@@ -19,12 +19,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 
     <script>
-        // {% if msg %}
-            //     alert("{{ msg }}")
-            // {% endif %}
-
-
-
         function sign_up() {
             let username = $("#input-username").val()
             let password = $("#input-password").val()
@@ -64,7 +58,7 @@
             }
             $.ajax({
                 type: "POST",
-                url: "/sign_up/save",
+                url: "/sign/save",
                 data: {
                     username_give: username,
                     password_give: password
@@ -105,7 +99,7 @@
             $("#help-id").addClass("is-loading")
             $.ajax({
                 type: "POST",
-                url: "/sign_up/check_dup",
+                url: "/sign/check_dup",
                 data: {
                     username_give: username
                 },

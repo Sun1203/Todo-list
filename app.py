@@ -62,13 +62,14 @@ def sign_in():
     else:
         return jsonify({'result': 'fail', 'msg': '아이디/비밀번호가 일치하지 않습니다.'})
 
+
 @app.route('/user/<username>')
 def user(username):
-    # 각 사용자의 프로필과 글을 모아볼 수 있는 공간
+    # 각 사용자의 글을 모아볼 수 있는 공간
     token_receive = request.cookies.get('mytoken')
     try:
         payload = jwt.decode(token_receive, SECRET_KEY, algorithms=['HS256'])
-        status = (username == payload["id"])  # 내 프로필이면 True, 다른 사람 프로필 페이지면 False
+        status = (username == payload["id"])
 
         user_info = db.users.find_one({"username": username}, {"_id": False})
         return render_template('user.html', user_info=user_info, status=status)
@@ -93,31 +94,6 @@ def check_dup():
     username_receive = request.form['username_give']
     exists = bool(db.users.find_one({"username": username_receive}))
     return jsonify({'result': 'success', 'exists': exists})
-
-@app.route('/update_profile', methods=['POST'])
-def save_img():
-    token_receive = request.cookies.get('mytoken')
-    try:
-        payload = jwt.decode(token_receive, SECRET_KEY, algorithms=['HS256'])
-        username = payload["id"]
-        name_receive = request.form["name_give"]
-        about_receive = request.form["about_give"]
-        new_doc = {
-            "profile_name": name_receive,
-            "profile_info": about_receive
-        }
-        if 'file_give' in request.files:
-            file = request.files["file_give"]
-            filename = secure_filename(file.filename)
-            extension = filename.split(".")[-1]
-            file_path = f"profile_pics/{username}.{extension}"
-            file.save("./static/"+file_path)
-            new_doc["profile_pic"] = filename
-            new_doc["profile_pic_real"] = file_path
-        db.users.update_one({'username': payload['id']}, {'$set':new_doc})
-        return jsonify({"result": "success", 'msg': '프로필을 업데이트했습니다.'})
-    except (jwt.ExpiredSignatureError, jwt.exceptions.DecodeError):
-        return redirect(url_for("home"))
 
 
 @app.route('/posting', methods=['POST'])
@@ -150,7 +126,7 @@ def get_posts():
         payload = jwt.decode(token_receive, SECRET_KEY, algorithms=['HS256'])
         my_username = payload["id"]
         username_receive = request.args.get("username_give")
-        if username_receive=="":
+        if username_receive == "":
             posts = list(db.posts.find({}).sort("date", -1).limit(20))
         else:
             posts = list(db.posts.find({"username":username_receive}).sort("date", -1).limit(20))
@@ -170,6 +146,7 @@ def get_posts():
         return jsonify({"result": "success", "msg": "포스팅을 가져왔습니다.", "posts": posts})
     except (jwt.ExpiredSignatureError, jwt.exceptions.DecodeError):
         return redirect(url_for("home"))
+
 
 @app.route('/update_like', methods=['POST'])
 def update_like():
@@ -195,6 +172,7 @@ def update_like():
         return jsonify({"result": "success", 'msg': 'updated', "count": count})
     except (jwt.ExpiredSignatureError, jwt.exceptions.DecodeError):
         return redirect(url_for("home"))
+
 
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5000, debug=True)

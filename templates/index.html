@@ -50,7 +50,7 @@
                 success: function (response) {
                     if (response['result'] == 'success') {
                         $.cookie('mytoken', response['token'], {path: '/'});
-                        window.location.replace("/after_login")
+                        window.location.replace("/user/"+username)
                     } else {
                         alert(response['msg'])
                     }

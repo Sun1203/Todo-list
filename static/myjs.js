@@ -102,6 +102,7 @@ function num2str(count) {
     return count
 }
 
+
 function toggle_like(post_id, type) {
     console.log(post_id, type)
     let $a_like = $(`#${post_id} a[aria-label='${type}']`)

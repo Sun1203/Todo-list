@@ -3,7 +3,7 @@
     <head>
 
         <!-- Webpage Title -->
-        <title>{{ user_info.profile_name }} | SWEETER</title>
+        <title>{{ user_info.profile_name }} | TodoList</title>
         <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
         <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
         <meta property="og:title" content="스위터 - 세상을 달달하게"/>
@@ -33,37 +33,12 @@
                 get_posts("{{ user_info.username }}")
             })
 
-            function update_profile() {
-                let name = $('#input-name').val()
-                let file = $('#input-pic')[0].files[0]
-                let about = $("#textarea-about").val()
-                let form_data = new FormData()
-                form_data.append("file_give", file)
-                form_data.append("name_give", name)
-                form_data.append("about_give", about)
-                console.log(name, file, about, form_data)
 
-                $.ajax({
-                    type: "POST",
-                    url: "/update_profile",
-                    data: form_data,
-                    cache: false,
-                    contentType: false,
-                    processData: false,
-                    success: function (response) {
-                        if (response["result"] == "success") {
-                            alert(response["msg"])
-                            window.location.reload()
-
-                        }
-                    }
-                });
-            }
 
             function sign_out() {
                 $.removeCookie('mytoken', {path: '/'});
                 alert('로그아웃!')
-                window.location.href = "/login"
+                window.location.href = "/"
             }
         </script>
 

@@ -42,7 +42,7 @@
             }
             $.ajax({
                 type: "POST",
-                url: "/sign_in",
+                url: "/login",
                 data: {
                     username_give: username,
                     password_give: password
@@ -78,7 +78,7 @@
     </div>
 </div>
 <div class="btns">
-    <div class="button" onclick="window.location.href='/register'">Sign Up</div>
+    <div class="button" onclick="window.location.href='/sign'">Sign Up</div>
     <div class="button" onclick="hidden_show()">Login</div>
 </div>
 
@@ -115,7 +115,7 @@
                         <h4 class="mb-3">아직 회원이 아니라면</h4>
                         <nav class="level is-mobile">
                             <button class="level-item button is-sparta is-outlined"
-                                    onclick="window.location.href='/register'">
+                                    onclick="window.location.href='/sign'">
                                 회원가입하기
                             </button>
                         </nav>

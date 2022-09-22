@@ -9,10 +9,10 @@
 
 
 ## 프로젝트 주소
-Here is a working live demo :  https://iharsh234.github.io/WebApp/
+https://iharsh234.github.io/WebApp/
 
 ## 프로젝트 와이어 프레임 및 API 설계도
-Here is a working live demo :  https://iharsh234.github.io/WebApp/
+https://verocony.tistory.com/2
 
 ## 프로젝트 시연영상
 Here is a working live demo :  https://iharsh234.github.io/WebApp/

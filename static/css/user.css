@@ -1,0 +1,182 @@
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700&display=swap');
+
+* {margin: 0;padding: 0;box-sizing: border-box;font-size: inherit;font-weight: normal;
+list-style: none;
+text-decoration: none;
+}
+
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    /*background-color:  #F4F6F8;*/
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ----------------------------------- has-navbar-fixed-top ----------------------------------*/
+/*.navbar {*/
+/*    width: 727px;*/
+/*    height: auto;*/
+/*    margin: 0 auto;*/
+/*    background-color: darkgoldenrod;*/
+/*}*/
+
+/*.navbar a i {*/
+/*    font-size: 20px;*/
+/*    font-weight: 700;*/
+/*    background-color: red;*/
+/*}*/
+/* ------------------------------------------- hero is-white -----------------------------------*/
+.wrap {
+    width: 727px;
+    height: auto;
+    margin: 150px auto;
+    padding: 60px 30px ;
+    border:1px solid #ECECEC ;
+    border-radius: 6px;
+    box-shadow: rgba(196,196,196,0.36) 0px 7px 10px 0px;
+}
+
+.date {
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    color: #020202;
+}
+
+.date span {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.navbar button {
+    background-color: #02B0A2;
+    border-radius: 10px;
+    color: #fff;
+    padding:  10px;
+    border: none;
+}
+.navbar button a {
+    color: #fff;
+    padding: 16px;
+    font-size: 20px;
+}
+
+.navbar button:hover {
+    color: #02B0A2;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.11) 0px 1px 4px 0px;
+    cursor: pointer;
+}
+
+.navbar button:hover a {
+    color: #02B0A2;
+}
+
+.navbar-brand {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    display: flex;
+    gap: 30px;
+}
+
+/* ------------------------------------------- #section-post -----------------------------------*/
+#input-post {
+    width: 100%;
+    height: 52px;
+    background-color: #f1f2f4;
+    color: #828282;
+    font-size: 20px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border: none;
+    outline: #020202;
+    border-radius: 12px;
+}
+
+.modal-content {
+    width: 600px;
+    max-width: 80%;
+}
+
+input::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+#modalbox {
+    display: none;
+    width: 500px;
+    height: auto;
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    background: #eee;
+    z-index: 2;
+    border-radius: 20px;
+}
+
+#modalbox .field textarea{
+    width: 100%;
+    height: 250px;
+    margin: 0 auto;
+    border: none;
+    background: #eee;
+    font-size: 20px;
+    color: #020202;
+    border-radius: 20px;
+    padding: 20px;
+    outline: none;
+}
+
+.black_bg {
+    display: none;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.level-right {
+    display: flex;
+    gap:30px;
+    margin: 20px 10px;
+}
+
+.level-right .is-sparta {
+     background-color: #02B0A2;
+    border-radius: 10px;
+    color: #fff;
+    padding:  10px;
+    border: none;
+}
+
+.is-sparta {
+    width: 26px;
+    height: 26px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.is-sparta a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/*#post-box {*/
+/*    background: #e8344e;*/
+/*}*/
+
+

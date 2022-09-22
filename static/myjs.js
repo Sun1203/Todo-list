@@ -38,29 +38,25 @@ function get_posts(username) {
 
                     let html_temp = `<div class="box" id="${post["_id"]}">
                                         <article class="media">
-                                            <div class="media-content">
-                                                <div class="content">
-                                                    <p>
-                                                        <small>${time_before}</small>
+                                            <div class="media-content" style="height: 150px; padding: 20px; margin: 20px 10px; 
+                                            box-shadow: rgba(196,196,196,0.36) 0px 7px 10px 0px; border-radius: 10px;
+                                            background-color: #f1f2f4; font-size: 18px; color:#828282">
+                                                <div class="content" >
+                                                    
+                                                        <p style="font-size: 18px; ">${time_before}</p>
                                                         <br>
-                                                       <a>✅</a>${post['comment']}
+                                                        <p style="font-size: 25px; color: #020202 float:left";>
+                                                       <a style="padding: 10px; background-color: =#02B0A2";>✅</a>${post['comment']}
+                                                    
+                                                    <span style="float:right";>
+                                                    <button onclick="" style="width: 60px; height: 43px;font-size: 16px;cursor: pointer;
+                                                    background-color: #02B0A2; border-radius: 10px; color: #fff;padding:  10px; border: none;">완료</button>
+                                                    <button onclick="" style="width: 60px; height: 43px;font-size: 16px;cursor: pointer;
+                                                    background-color: #02B0A2; border-radius: 10px; color: #fff;padding:  10px; border: none;">삭제</button>
+                                                    </span>
                                                     </p>
                                                 </div>
-                                                <nav class="level is-mobile">
-                                                    <a onclick="">⭕</a>
-                                                    <a onclick="">❎</a>
-                                                
-                                                        <a class="level-item is-sparta" aria-label="star" onclick="toggle_like('${post['_id']}', 'star')">
-                                                            <span class="icon is-small"><i class="fa ${class_star}"
-                                                                                           aria-hidden="true"></i></span>&nbsp;<span class="like-num">${num2str(post["count_star"])}</span>
-                                                        </a>
-                                                        <a class="level-item is-sparta" aria-label="like" onclick="toggle_like('${post['_id']}', 'like')">
-                                                            <span class="icon is-small"><i class="fa ${class_like}"
-                                                                                           aria-hidden="true"></i></span>&nbsp;<span class="like-num">${num2str(post["count_like"])}</span>
-                                                        </a>
-                                                    </div>
-
-                                                </nav>
+                                             
                                             </div>
                                         </article>
                                     </div>`

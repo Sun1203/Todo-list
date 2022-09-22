@@ -47,7 +47,7 @@ Here is a working live demo :  https://iharsh234.github.io/WebApp/
 - to-do-list 포스팅 기능
 - 로그인 정보를 가져와서 본인이 작성한 포스트만 렌더되도록 구현.
 - 다른 유저가 내 to-do-list에 접근하더라도 포스트를 작성 하지 못하도록 방지
-
+- 로그아웃시 쿠키 제거하고 로그인정보 삭제
 ![](https://iharsh234.github.io/WebApp/images/demo/demo_chart1.JPG)
 
 

@@ -37,7 +37,8 @@ Here is a working live demo :  https://iharsh234.github.io/WebApp/
 ### Sign up page
 - ID 중복확인 체크.
 - ID/PW 조건확인.
-- 로그인 버튼 클릭시 상세 페이지로 이동.
+- 회원가입 버튼 클릭시 상세 페이지로 이동.
+- 취소 버튼 클릭시 메인 페이지로 이동.
 
 
 <img width="1440" alt="스크린샷 2022-09-22 오전 11 41 13" src="https://user-images.githubusercontent.com/84012715/191648239-28e967f7-348f-4533-bbea-2843e1eb51a8.png">

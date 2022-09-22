@@ -21,20 +21,24 @@ Here is a working live demo :  https://iharsh234.github.io/WebApp/
 ## Site
 
 ### Main Page
-- 여기에 기능 작성
-- 작성2
+- Login 버튼을 누를시 페이지간 이동없이 로그인창으로 이동
+- Sign up 버튼을 누를시 회원가입 페이지로 이동
 
 <img width="1440" alt="스크린샷 2022-09-22 오전 11 39 33" src="https://user-images.githubusercontent.com/84012715/191647291-17ac1657-cbea-4bdb-ba9e-4fe90fbc68ea.png">
 
 ### Login page
-- 기능적기
-- 적기2
+- JWT 방식으로 구현.
+- 로그인 버튼 클릭시 상세 페이지로 이동과 동시에 JWT토큰 발급.
+- 취소 버튼 클릭시 메인페이지로 이동
+- 회원가입 버튼 클릭시 회원가입 페이지로 이동
 
 <img width="1440" alt="스크린샷 2022-09-22 오전 11 40 30" src="https://user-images.githubusercontent.com/84012715/191648089-e20f97b5-4b47-4433-a05b-5e43167d32ae.png">
 
 ### Sign up page
-- 기능, 기능
-- 기능, 기능
+- ID 중복확인 체크.
+- ID/PW 조건확인.
+- 로그인 버튼 클릭시 상세 페이지로 이동.
+
 
 <img width="1440" alt="스크린샷 2022-09-22 오전 11 41 13" src="https://user-images.githubusercontent.com/84012715/191648239-28e967f7-348f-4533-bbea-2843e1eb51a8.png">
 

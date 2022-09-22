@@ -11,8 +11,8 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 app.config['UPLOAD_FOLDER'] = "./static/profile_pics"
 
 SECRET_KEY = 'SPARTA'
-client = MongoClient('mongodb+srv://test:sparta@cluster0.hppmhdy.mongodb.net/Cluster0?retryWrites=true&w=majority')
-# client = MongoClient('내AWS아이피', 27017, username="아이디", password="비밀번호")
+# client = MongoClient('mongodb+srv://test:sparta@cluster0.hppmhdy.mongodb.net/Cluster0?retryWrites=true&w=majority')
+client = MongoClient('43.201.61.223', 27017, username="test", password="test")
 #client = MongoClient('13.209.22.150', 27017, username="test", password="test")
 db = client.dbsparta_plus_week4
 
@@ -108,8 +108,6 @@ def posting():
         print(type(date_receive))
         doc = {
             "username": user_info["username"],
-            "profile_name": user_info["profile_name"],
-            "profile_pic_real": user_info["profile_pic_real"],
             "comment": comment_receive,
             "date": date_receive
         }

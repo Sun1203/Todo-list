@@ -43,9 +43,10 @@ Here is a working live demo :  https://iharsh234.github.io/WebApp/
 
 <img width="1440" alt="스크린샷 2022-09-22 오전 11 41 13" src="https://user-images.githubusercontent.com/84012715/191648239-28e967f7-348f-4533-bbea-2843e1eb51a8.png">
 
-### Sign up page
-- 기능, 기능
-- 기능기능,
+### to-do-list Main page
+- to-do-list 포스팅 기능
+- 로그인 정보를 가져와서 본인이 작성한 포스트만 렌더되도록 구현.
+- 다른 유저가 내 to-do-list에 접근하더라도 포스트를 작성 하지 못하도록 방지
 
 ![](https://iharsh234.github.io/WebApp/images/demo/demo_chart1.JPG)
 

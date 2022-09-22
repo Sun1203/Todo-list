@@ -7,15 +7,12 @@
 </tr>
 </table>
 
+## Team
+[이승주](https://github.com/RefinedStone), [박지윤](https://github.com/verocony), [이재선](https://github.com/Sun1203)
 
-## 프로젝트 주소
-https://iharsh234.github.io/WebApp/
+## 기술 스택
+HTML / CSS / JavaScript / Python / Flask / mongoDB 
 
-## 프로젝트 와이어 프레임 및 API 설계도
-https://verocony.tistory.com/2
-
-## 프로젝트 시연영상
-Here is a working live demo :  https://iharsh234.github.io/WebApp/
 
 
 ## Site
@@ -48,7 +45,7 @@ Here is a working live demo :  https://iharsh234.github.io/WebApp/
 - 로그인 정보를 가져와서 본인이 작성한 포스트만 렌더되도록 구현.
 - 다른 유저가 내 to-do-list에 접근하더라도 포스트를 작성 하지 못하도록 방지
 - 로그아웃시 쿠키 제거하고 로그인정보 삭제
-![](https://iharsh234.github.io/WebApp/images/demo/demo_chart1.JPG)
+<img width="1440" alt="스크린샷 2022-09-22 오후 6 52 44" src="https://user-images.githubusercontent.com/84012715/191716900-e3c1febd-cb15-4e75-8f01-785f16860217.png">
 
 
 
@@ -56,7 +53,7 @@ Here is a working live demo :  https://iharsh234.github.io/WebApp/
 
 
 
-## [Usage](https://iharsh234.github.io/WebApp/) 
+## [Usage](https://github.com/Sun1203/Todo-list/issues) 
 
 
 ### Bug / Feature Request
@@ -74,17 +71,20 @@ Here is a working live demo :  https://iharsh234.github.io/WebApp/
 
 
 ## To-do
-- Add BSE (India) Symbol to the current App.
-- Decide comparison models of Stocks. (suggestions are most welcome).
-- Another WebApp, capable of comparing at least 10 stocks.
+- 할일 삭제 기능
+- 할일 완료 기능
+- 달성률 보여주기 기능
 
-## Team
 
-[![Harsh Vijay](https://avatars1.githubusercontent.com/u/12688534?v=3&s=144)](https://github.com/iharsh234)  | [![Quandl.com](https://github.com/iharsh234/WebApp/blob/master/images/quandl.jpg)](https://www.quandl.com/)
----|---
-[Harsh Vijay ](https://github.com/iharsh234) |[Quandl](https://www.quandl.com)
 
-## [License](https://github.com/iharsh234/WebApp/blob/master/LICENSE.md)
+### [프로젝트 주소](http://jasunzzang.shop/)
 
-MIT © [Harsh Vijay ](https://github.com/iharsh234)
+
+### [프로젝트 와이어 프레임 및 API 설계도](https://verocony.tistory.com/2)
+
+
+### [프로젝트 시연영상](https://www.youtube.com/watch?v=j4RvK1emvr4&t=3s)
+
+
+
 
